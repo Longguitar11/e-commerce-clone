@@ -1,4 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ===============================
+   Sofia Pro – Full Family (TTF)
+================================ */
+
+/* UltraLight */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraLight */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-LightItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-MediumItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-SemiBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-BoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./assets/fonts/sofia-pro/SofiaPro-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -8,6 +141,23 @@
   --font-lora: 'Lora', serif;
   --font-opensans: 'Open Sans', sans-serif;
   --font-trirong: 'Trirong', serif;
+  --font-sofiapro: 'Sofia Pro', sans-serif;
+
+  --color-dark-gray: #212121;
+
+  --breakpoint-mobile-sm: 678px;
+
+  /* ANIMATIONS */
+  --animate-logo-scroll: logo-scroll 60s linear infinite;
+
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 :root {
@@ -69,10 +219,10 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -85,4 +235,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.custom-scroll {
+  scrollbar-color: #8b8b8b white;
+  /* scrollbar-width: thin; */
+}
+
+
+.custom-scroll::-webkit-scrollbar-track {
+  /* background: white; */
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  /* background-color: #d1d5db; */
+  /* border-radius: 999px; */
 }

@@ -1,12 +1,13 @@
+import classNames from 'classnames'
 import React from 'react'
 
-const TextIcon = ({ urlIcon, text }) => {
+const TextIcon = ({ urlIcon, text, className, iconCustom, textCustom }) => {
     return (
-        <div className='flex items-center gap-3'>
-            <div className='w-[10%] flex justify-center'>
+        <div className={classNames('flex items-center gap-3', className)}>
+            <div className={classNames('w-[10%] flex justify-center', iconCustom)}>
                 <img src={urlIcon} alt="" className='w-full' />
             </div>
-            <p className=''>{text}</p>
+            <p className={textCustom}>{text}</p>
         </div>
     )
 }
