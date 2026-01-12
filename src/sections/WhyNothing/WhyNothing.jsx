@@ -1,7 +1,10 @@
 import React from 'react'
 import { WHY_NOTHING_ITEMS } from './WhyNothing.constants'
+import { useNavigate } from 'react-router-dom'
 
 const WhyNothing = () => {
+    const navigate = useNavigate()
+    
     return (
         <section className='font-nunito bg-[#f7f2e7] pb-[70px] mb-9'>
             <div className="mx-auto max-w-335 px-[15px] min-[750px]:px-[50px]">
@@ -38,7 +41,7 @@ const WhyNothing = () => {
                 </div>
 
                 <div className='mt-6 flex flex-col gap-4 items-center'>
-                    <button className='max-mobile-sm:text-base text-lg max-mobile-sm:p-4 max-mobile-sm:w-full py-4.5 px-20 rounded bg-black font-bold text-white text-center hover:opacity-70 transition-opacity duration-200'>Try Lymphatic Drainage Risk-Free</button>
+                    <button onClick={() => navigate('https://pay.trysculptique.com/lymphatic/checkout')} className='max-mobile-sm:text-base text-lg max-mobile-sm:p-4 max-mobile-sm:w-full py-4.5 px-20 rounded bg-black font-bold text-white text-center hover:opacity-70 transition-opacity duration-200'>Try Lymphatic Drainage Risk-Free</button>
                     <div className='flex items-center justify-center gap-4'>
                         <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/60-days_11622780_1_1.png?v=1752388395" alt="" className='w-6 shrink-0'/>
                         <p className='font-bold'>60 day money-back guarantee</p>
