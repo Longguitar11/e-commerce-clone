@@ -16,7 +16,6 @@ const Icons = () => {
                         </div>
                     ))
                 }
-
             </div>
         </section>
     )

@@ -21,9 +21,7 @@ const Modal = ({ isOpen, title, onClose, children }) => {
                         </svg>
                     </button>
 
-                    {/* <h2 className="font-lora text-xl mb-3"> */}
-                        {title}
-                    {/* </h2> */}
+                    {title}
 
                     {/* Close button */}
                     <button

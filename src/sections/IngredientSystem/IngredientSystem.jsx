@@ -45,7 +45,6 @@ const IngredientSystem = () => {
                                     </button>
                                 </div>
 
-
                                 <div className={classNames('overflow-hidden transition-[max-height, transform] duration-500 ease-out', 
                                     activeItems.includes(id)
                                     ? "max-h-[500px] translate-y-0 pt-3"
