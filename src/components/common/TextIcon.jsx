@@ -7,7 +7,7 @@ const TextIcon = ({ urlIcon, text, className, iconCustom, textCustom }) => {
             <div className={classNames('w-[10%] flex justify-center', iconCustom)}>
                 <img src={urlIcon} alt="" className='w-full' />
             </div>
-            <p className={textCustom}>{text}</p>
+            <p className={classNames('text-base leading-[1.3em]', textCustom)}>{text}</p>
         </div>
     )
 }

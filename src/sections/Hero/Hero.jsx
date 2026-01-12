@@ -2,28 +2,28 @@ import React, { useState } from 'react'
 import TextIcon from '../../components/common/TextIcon'
 import classNames from 'classnames'
 import Modal from '../../components/common/Modal';
-import { LEARN_MORE_MODAL_TITLE } from './Hero.constants';
-import { DoctorsList, ModalItems, MoreDetails, Review, Sale } from './Hero.components';
+import { IMAGES, LEARN_MORE_MODAL_TITLE } from './Hero.constants';
+import { DoctorsList, MainProductImage, ModalItems, MoreDetails, Review, Sale } from './Hero.components';
 import { BiLinkExternal } from 'react-icons/bi';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import 'swiper/css';
 
 const Hero = () => {
     const [isHideReviews, setIsHideReviews] = useState(false);
     const [isShowLearnMore, setIsShowLearnMore] = useState(false);
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
         <>
             <section className='py-8'>
                 <div className="mx-auto max-w-335 px-[15px] min-[750px]:px-[50px]">
-                    <div className='flex gap-16 max-[678px]:flex-col'>
-                        <div className='space-y-4 flex-1'>
-                            <div className='relative'>
-                                <img src='https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674' alt='' className='w-full rounded-lg' />
-                                <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224" alt="" className='absolute top-4 right-4 max-w-20 md:max-w-30' />
-                                <div className='absolute px-6 py-2 bottom-8 left-1/2 -translate-x-1/2 bg-[#ffffffd9] rounded-3xl text-center max-w-[290px] flex items-center gap-2 border border-black'>
-                                    <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629" alt="" className='w-6 shrink-0 object-cover aspect-[1]' />
-                                    <p className='font-montserrat text-[14px] opacity-75'>Nutritional Information</p>
-                                </div>
-                            </div>
+                    <div className='flex max-mobile-sm:gap-4 gap-16 max-mobile-sm:flex-col'>
+                        <div className='space-y-4 flex-1 max-mobile-sm:hidden'>
+                            <MainProductImage />
 
                             <div className='grid grid-cols-2 gap-4'>
                                 <div>
@@ -58,6 +58,57 @@ const Hero = () => {
                                     <img src="https://trysculptique.com/cdn/shop/files/puffiness-min.png?v=1758713216" alt="" className='rounded-lg' />
                                 </div>
                             </div>
+                        </div>
+
+                        <div className='mobile-sm:hidden'>
+                            <Swiper
+                                style={{
+                                    '--swiper-navigation-color': '#fff',
+                                }}
+                                spaceBetween={10}
+                                navigation={true}
+                                initialSlide={1}
+                                loop={true}
+                                thumbs={{ swiper: thumbsSwiper }}
+                                modules={[FreeMode, Navigation, Thumbs]}
+                                className="mySwiper2"
+                            >
+                                {
+                                    IMAGES.map((image, index) => (
+                                        <SwiperSlide key={index} className='cursor-pointer'>
+                                            {
+                                                image?.defaultValue
+                                                    ?
+                                                    <MainProductImage />
+                                                    :
+                                                    <div>
+                                                        <img src={image.imgUrl} alt="" className='rounded-lg aspect-square object-cover overflow-hidden' />
+                                                    </div>
+                                            }
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
+
+                            <Swiper
+                                loop
+                                onSwiper={setThumbsSwiper}
+                                spaceBetween={8}
+                                slidesPerView={4}
+                                watchSlidesProgress={true}
+                                modules={[Navigation, Thumbs]}
+                                className="mySwiper mt-2"
+                            >
+                                {
+                                    IMAGES.map((image, index) => (
+                                        <SwiperSlide key={index} className='cursor-pointer'>
+                                            <div>
+                                                <img src={image.imgUrl} alt="" className='rounded-lg aspect-square object-cover overflow-hidden' />
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
                         </div>
 
                         <div className='flex-1 font-nunito space-y-4'>
@@ -108,7 +159,7 @@ const Hero = () => {
                                                 <img src="https://assets.app.thefrontrowhealth.com/pa8nliuewz7t7g0dmxjawwf0kr5a" alt="Dr. Green" className='rounded-full w-[17.6px] object-fit bg-[#eee] z-2 border-2 border-white -ml-[5px]' />
                                             </div>
 
-                                            <button className='hover:underline hover:underline-offset-4 font-semibold'>
+                                            <button className='hover:underline hover:decoration-dark-gray hover:underline-offset-4 font-semibold'>
                                                 <p>Read their reviews</p>
                                             </button>
                                         </div>

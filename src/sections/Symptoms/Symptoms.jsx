@@ -30,7 +30,7 @@ const Symptoms = () => {
                     <img src="https://trysculptique.com/cdn/shop/files/Frame_1000003583.png?v=1760690769" alt="" className='max-mobile-sm:block hidden' />
                 </div>
 
-                <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003589.png?v=1760690549" alt="" className='max-mobile-sm:w-8.5 w-12 mx-auto max-mobile-sm:4 my-6' />
+                <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Frame_1000003589.png?v=1760690549" alt="" className='max-mobile-sm:w-8.5 w-12 mx-auto max-mobile-sm:my-4 my-6' />
             </div>
         </section>
     )

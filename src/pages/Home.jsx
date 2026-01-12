@@ -5,6 +5,14 @@ import AsSeenIn from '../sections/AsSeenIn/AsSeenIn'
 import YouBeenMissing from '../sections/YouBeenMissing/YouBeenMissing'
 import DrainageSystem from '../sections/DrainageSystem/DrainageSystem'
 import WhyNothing from '../sections/WhyNothing/WhyNothing'
+import IngredientSystem from '../sections/IngredientSystem/IngredientSystem'
+import Reviews from '../sections/Reviews/Reviews'
+import Icons from '../sections/Icons/Icons'
+import Expert from '../sections/Expert/Expert'
+import Stories from '../sections/Stories/Stories'
+import FAQ from '../sections/FAQ/FAQ'
+import Stats from '../sections/Stats/Stats'
+import Summary from '../sections/Summary/Summary'
 
 const Home = () => {
   return (
@@ -15,6 +23,14 @@ const Home = () => {
         <YouBeenMissing />
         <DrainageSystem />
         <WhyNothing />
+        <IngredientSystem />
+        <Reviews />
+        <Icons />
+        <Expert />
+        <Stories />
+        <FAQ />
+        <Stats />
+        <Summary />
     </div>
   )
 }

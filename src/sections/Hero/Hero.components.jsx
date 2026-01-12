@@ -96,9 +96,9 @@ export const Sale = () => {
                             </div>
 
                             <div className={classNames("*:bg-[#039869] *:border-b *:border-white *:last:border-0 *:last:rounded-b-xl text-[12px] font-bold", selectedOption !== id && 'opacity-60')}>
-                                <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/delivery-truck_181581.png?v=1749555916'} text={'Free USA Shipping'} className={'py-1 px-2'} textCustom={'text-white'} iconCustom={'w-8!'} />
-                                {id !== 1 && <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/download_5307610.png?v=1749555943'} text={'Free Anti-Bloating Protocol E-book'} className={'py-1 px-2'} textCustom={'text-white'} iconCustom={'w-8!'} />}
-                                {id === 3 && <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/Kaching-Bundles-Kaching-Bundles-Kaching-Bundles-gift-card_18054896_300x300_300x300_72117561-797d-4e48-9491-3bc1748ce974.png?v=1749556309'} text={'$20 Gift Card'} className={'py-1 px-2'} textCustom={'text-white'} iconCustom={'w-8!'} />}
+                                <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/delivery-truck_181581.png?v=1749555916'} text={'Free USA Shipping'} className={'py-1 px-2'} textCustom={'text-white text-[12px]'} iconCustom={'w-8!'} />
+                                {id !== 1 && <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/download_5307610.png?v=1749555943'} text={'Free Anti-Bloating Protocol E-book'} className={'py-1 px-2'} textCustom={'text-white text-[12px]'} iconCustom={'w-8!'} />}
+                                {id === 3 && <TextIcon urlIcon={'https://trysculptique.com/cdn/shop/files/Kaching-Bundles-Kaching-Bundles-Kaching-Bundles-gift-card_18054896_300x300_300x300_72117561-797d-4e48-9491-3bc1748ce974.png?v=1749556309'} text={'$20 Gift Card'} className={'py-1 px-2'} textCustom={'text-white text-[12px]'} iconCustom={'w-8!'} />}
                             </div>
                         </div>
                     ))
@@ -116,7 +116,7 @@ export const Sale = () => {
             <div className="flex items-center justify-center gap-4 mt-4">
                 <div className="flex items-center justify-center gap-2 border-r border-black pr-4">
                     <SlRefresh className="max-mobile-sm:text-[14px] text-[20px] shrink-0" />
-                    <p className="max-mobile-sm:text-[12px]">Refills Ship Bi-Monthly</p>
+                    <p className="max-mobile-sm:text-[12px]">Refills Ship Every 12 Week</p>
                 </div>
 
                 <div className="flex items-center justify-center gap-2">
@@ -174,9 +174,10 @@ export const Review = () => {
                 </div>
             </div>
 
-            <p className="font-semibold tracking-[0]">Even my husband noticed... the spark came back.</p>
-
-            <p className="tracking-[0]">After years of hiding under coverups, picking apart my body, and feeling disconnected, I finally feel at ease again. I feel less bloated, lighter, like my body is working with me not against me. These past months, I’ve been present. Even my marriage feels renewed, not just in how I look but in how I feel. It’s hard to explain, but once you try it you’ll get it. I’d recommend this to my closest friends without question.</p>
+            <div className="space-y-2 text-base">
+                <p className="font-semibold tracking-[0]">Even my husband noticed... the spark came back.</p>
+                <p className="tracking-[0] leading-[1.3em]">After years of hiding under coverups, picking apart my body, and feeling disconnected, I finally feel at ease again. I feel less bloated, lighter, like my body is working with me not against me. These past months, I’ve been present. Even my marriage feels renewed, not just in how I look but in how I feel. It’s hard to explain, but once you try it you’ll get it. I’d recommend this to my closest friends without question.</p>
+            </div>
         </div >
     )
 }
@@ -196,22 +197,31 @@ export const MoreDetails = () => {
         <div className="space-y-4">
             {
                 DETAILS_ITEMS.map(({ id, title, desc }) => (
-                    <div key={id} className={classNames("border rounded-4xl p-4 cursor-pointer", selectedDetail.includes(id) ? "border-[#039869]" : "border-[#d2d2d2]")} onClick={() => handleSelectDetail(id)}>
-                        <div className=" flex items-center justify-between">
+                    <div key={id} className={classNames("border text-base rounded-4xl p-4 cursor-pointer", selectedDetail.includes(id) ? "border-[#039869]" : "border-[#d2d2d2]")} onClick={() => handleSelectDetail(id)}>
+                        <div className="flex items-center justify-between">
                             <p>{title}</p>
                             <div>
                                 <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/Button_To_Expand_1_8a6027c0-281a-4c6b-8881-60673c7255ec.png?v=1758716844" alt="" className={classNames("w-6 transition-transform duration-200", selectedDetail.includes(id) && 'rotate-45')} />
                             </div>
                         </div>
 
-                        {
-                            selectedDetail.includes(id) && (
-                                <div className="pt-4">{ReactParser(desc)}</div>
-                            )
-                        }
+                        <div className={classNames("transition-all duration-500 overflow-hidden", selectedDetail.includes(id) ? "max-h-[1500px] translate-y-0 opacity-100 pt-4" : "max-h-0 -translate-y-3 opacity-0")}>{ReactParser(desc)}</div>
                     </div>
                 ))
             }
-        </div >
+        </div>
+    )
+}
+
+export const MainProductImage = () => {
+    return (
+        <div className='relative'>
+            <img src='https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674' alt='' className='w-full rounded-lg' />
+            <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/nysale.png?v=1766822224" alt="" className='absolute top-4 right-4 max-w-20 md:max-w-30' />
+            <div className='absolute px-6 py-2 bottom-8 left-1/2 -translate-x-1/2 bg-[#ffffffd9] rounded-3xl text-center max-w-[290px] flex items-center gap-2 border border-black'>
+                <img src="https://cdn.shopify.com/s/files/1/0917/5649/5191/files/leaves_1247958_1_cf2e7df4-c113-4c3a-be49-f876ec94d873.png?v=1766822629" alt="" className='w-6 shrink-0 object-cover aspect-[1]' />
+                <p className='font-montserrat text-[14px] opacity-75'>Nutritional Information</p>
+            </div>
+        </div>
     )
 }

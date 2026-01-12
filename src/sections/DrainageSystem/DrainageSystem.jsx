@@ -22,7 +22,7 @@ const DrainageSystem = () => {
                                 </div>
                             ))
                         }
-                        <p className='py-2 px-4 rounded-lg bg-[#ffe3e3] my-6'>{DS_ITEM_1.desc3}</p>
+                        <p className='py-2 px-4 rounded-lg bg-[#ffe3e3] max-mobile-sm:my-3 my-6'>{DS_ITEM_1.desc3}</p>
                         {
                             DS_ITEM_1.group2.map((item, index) => (
                                 <div key={index} className='flex items-center gap-3'>
@@ -50,7 +50,7 @@ const DrainageSystem = () => {
                         <p className=''>{ReactParser(DS_ITEM_2.desc1)}</p>
                         <p className=''>{DS_ITEM_2.desc2}</p>
 
-                        <div className='py-2 px-4 rounded-lg bg-[#ffe3e3] my-6'>
+                        <div className='py-2 px-4 rounded-lg bg-[#ffe3e3] max-mobile-sm:my-3 my-6'>
                         <p>{DS_ITEM_2.desc3}</p>
                         {
                             DS_ITEM_2.group1.map((item, index) => (

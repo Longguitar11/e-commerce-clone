@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 export const LEARN_MORE_MODAL_TITLE = <svg width="200" height="32" viewBox="0 0 1048 166" fill="none" xmlns="http://www.w3.org/2000/svg" className='h-6'>
     <g clip-path="url(#clip0_504_153)">
         <path d="M242.305 140.276C241.201 140.276 240.374 140.138 239.823 139.862C239.271 139.586 238.995 139.113 238.995 138.453C238.995 137.577 239.35 136.966 240.069 136.631C240.788 136.296 241.694 136.03 242.797 135.804C245.338 135.252 247.151 134.454 248.254 133.4C249.357 132.356 249.909 130.731 249.909 128.515V81.8454C248.806 81.8454 247.535 81.8159 246.107 81.7666C244.669 81.7075 243.073 81.6287 241.31 81.5204C240.975 81.412 240.512 81.0279 239.901 80.358C239.291 79.6981 238.995 79.0874 238.995 78.5358C238.995 78.3191 239.163 78.1221 239.488 77.9546C239.813 77.7872 240.039 77.6493 240.148 77.5409C242.137 76.5461 243.841 75.6694 245.279 74.8913C246.708 74.123 248.254 73.3448 249.909 72.5765C249.909 62.9826 251.091 54.9844 253.465 48.5819C255.838 42.1892 258.902 37.1066 262.645 33.3538C266.397 29.6009 270.367 26.9316 274.563 25.326C278.759 23.7303 282.669 22.9226 286.314 22.9226C292.49 22.9226 297.07 23.8584 300.045 25.7397C303.019 27.6211 304.516 29.9851 304.516 32.8514C304.516 35.0578 303.965 36.7126 302.862 37.8158C301.759 38.919 300.439 39.4706 298.892 39.4706C297.897 39.4706 296.991 39.0865 296.164 38.3083C295.336 37.54 294.371 36.6535 293.268 35.6587C291.83 34.2206 290.067 32.8711 287.969 31.6005C285.871 30.3298 283.004 29.6994 279.36 29.6994C274.169 29.6994 269.904 31.9649 266.535 36.4861C263.167 41.0072 261.492 47.9613 261.492 57.3386V71.8969C261.492 72.5568 261.679 73.0001 262.073 73.2168C262.458 73.4433 262.871 73.5517 263.314 73.5517H283.999C284.551 73.5517 285.043 73.7191 285.487 74.0442C285.93 74.3791 286.146 74.8223 286.146 75.3641C286.146 76.1422 286.068 76.9598 285.9 77.8463C285.733 78.7328 285.487 79.5011 285.152 80.1611C284.817 81.0476 284.324 81.481 283.664 81.481H264.634C263.314 81.481 262.458 81.678 262.073 82.0621C261.689 82.4463 261.492 82.9683 261.492 83.6381V128.485C261.492 130.692 262.211 132.317 263.64 133.371C265.068 134.425 267.993 135.223 272.406 135.774C274.947 136.109 276.208 136.986 276.208 138.424C276.208 139.084 275.932 139.557 275.381 139.832C274.829 140.108 274.002 140.246 272.898 140.246C269.589 140.246 266.663 140.108 264.132 139.832C261.591 139.557 258.892 139.419 256.026 139.419C254.144 139.419 252.608 139.478 251.396 139.586C250.185 139.695 248.914 139.832 247.594 140C246.274 140.167 244.501 140.246 242.295 140.246L242.305 140.276Z" fill="#212121"></path>
@@ -118,5 +119,61 @@ export const DETAILS_ITEMS = [
         id: 3,
         title: 'Shipping and returns',
         desc: '<p class="mb-3">All of Sculptique orders get FREE shipping straight from our USA warehouse. Orders are usually shipped out within 1-2 working days, and you should receive the order within 3-7 working days for domestic USA orders, and within 10 working days for International orders.</p><p>We also offer a 60-day money back guarantee - if you are unsatisfied with our product, you can take advantage of our guarantee and ship back the product to us to get your return within 60 days of receiving your order.</p>'
+    }
+]
+
+export const IMAGES = [
+    {
+        id: 1,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard13.jpg?v=1760103685'
+    },
+    {
+        id: 2,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymoPDPImagesArtboard1_8e287aa1-576e-42b1-9a87-ce2fcdaded3a.jpg?v=1760103674',
+        defaultValue: true,
+    },
+    {
+        id: 3,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard2.jpg?v=1760103684'
+    },
+    {
+        id: 4,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard3copy.jpg?v=1760103684'
+    },
+    {
+        id: 5,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard4.jpg?v=1760103685'
+    },
+    {
+        id: 6,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard5_1.jpg?v=1760103685'
+    },
+    {
+        id: 7,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard5_2.jpg?v=1760103685'
+    },
+    {
+        id: 8,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard6.jpg?v=1760103685'
+    },
+    {
+        id: 9,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard8.jpg?v=1760103685'
+    },
+    {
+        id: 10,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard9.jpg?v=1760103684'
+    },
+    {
+        id: 11,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard10.jpg?v=1760103684'
+    },
+    {
+        id: 12,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard11.jpg?v=1760103684'
+    },
+    {
+        id: 13,
+        imgUrl: 'https://trysculptique.com/cdn/shop/files/LymphDrainageREWAMPEDvisualsArtboard12.jpg?v=1760103685'
     }
 ]
